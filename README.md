@@ -9,5 +9,5 @@ The Bubble Sort method takes an array of integers as a parameter, it iterates ov
 # My Plan
 
 - Iterate over the array
-- Store temp variable for the previous index and swap with the current if necessary
+- Compare the current index with the next so arr[i] and arr[i + 1]
 - Return new array
