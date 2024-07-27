@@ -1,21 +1,19 @@
-arr = [3, 29, 6, 5]
+arr = [4, 3, 78, 2, 0, 2]
 
 # Testing first pass of sort concept
 def bubble_sort (arr)
-  i = 0
-  # First pass test
-  while i < (arr.length - 1)
-
-    # Parallel Assignment -> Swap values x,y = y,x
-    if (arr[i] > arr[i + 1])
-      arr[i], arr[i + 1] = arr[i + 1], arr[i]
+  arr.each_with_index {|val, idx|
+  if idx < arr.length - 1
+    #Parallel Assignment
+    if (arr[idx] > arr[idx + 1])
+      arr[idx], arr[idx + 1] = arr[idx + 1], arr[idx]
     end
-
-    # Break Loop
-    i += 1
+  else
+    break
   end
+}
 
 return arr
 end
 
-print bubble_sort(arr)
+puts bubble_sort(arr)
